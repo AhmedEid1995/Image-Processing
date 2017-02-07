@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>943</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MyImageViewr</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="1">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustIgnored</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>878</width>
+         <height>546</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>false</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>943</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionClose"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <widget class="QMenu" name="menuRotate_2">
+     <property name="title">
+      <string>Rotate</string>
+     </property>
+     <addaction name="actionRotate_Left"/>
+     <addaction name="actionRotate_Right"/>
+     <addaction name="actionRotate_With_Angle"/>
+    </widget>
+    <widget class="QMenu" name="menuZoom_2">
+     <property name="title">
+      <string>Zoom</string>
+     </property>
+     <addaction name="actionZoom_in"/>
+     <addaction name="actionZoom_out"/>
+     <addaction name="actionZoom_on_Area"/>
+    </widget>
+    <addaction name="actionReset_to_Origin"/>
+    <addaction name="actionCrop"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="menuRotate_2"/>
+    <addaction name="menuZoom_2"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionClose"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionReset_to_Origin"/>
+   <addaction name="separator"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="separator"/>
+   <addaction name="actionCrop"/>
+   <addaction name="separator"/>
+   <addaction name="actionRotate_Left"/>
+   <addaction name="actionRotate_Right"/>
+   <addaction name="actionRotate_With_Angle"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_out"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="actionZoom_on_Area"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/save.ico</normaloff>:/save.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Open              Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/close.ico</normaloff>:/close.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Close              Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/save2.ico</normaloff>:/save2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Save                Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionReset_to_Origin">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/reset.png</normaloff>:/reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reset to Origin</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/Undo.png</normaloff>:/Undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo        Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/redo.png</normaloff>:/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo        Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCrop">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/crop.png</normaloff>:/crop.png</iconset>
+   </property>
+   <property name="text">
+    <string>Crop</string>
+   </property>
+  </action>
+  <action name="actionRotate_Left">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/rotateLeft.png</normaloff>:/rotateLeft.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Left</string>
+   </property>
+  </action>
+  <action name="actionRotate_Right">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/rotateRight.png</normaloff>:/rotateRight.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Right</string>
+   </property>
+  </action>
+  <action name="actionRotate_With_Angle">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/angle.png</normaloff>:/angle.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate With Angle    Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/zoom-in.png</normaloff>:/zoom-in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/zoom-out.png</normaloff>:/zoom-out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="actionZoom_on_Area">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/zoom_area.png</normaloff>:/zoom_area.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom on Area</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>scrollArea</tabstop>
+ </tabstops>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
